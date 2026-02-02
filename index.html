@@ -611,6 +611,102 @@ section {
     transform: translateY(0);
   }
 }
+/* ================= EXPERIENCE SECTION ================= */
+
+.experience-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  background: #111;
+  border-radius: 15px;
+  padding: 2.5rem;
+  border: 1px solid #222;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(180deg, #00ff88, #00cc6a);
+  border-radius: 15px 0 0 15px;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 255, 136, 0.25);
+  border-color: #00ff88;
+}
+
+/* Left section */
+.exp-left h3 {
+  color: #00ff88;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0.3rem;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Badge */
+.exp-badge {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  background: rgba(0, 255, 136, 0.15);
+  color: #00ff88;
+  font-weight: bold;
+}
+
+/* Right section */
+.exp-right ul {
+  padding-left: 1.2rem;
+}
+
+.exp-right li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.exp-right li::marker {
+  color: #00ff88;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card::before {
+    width: 100%;
+    height: 4px;
+    border-radius: 15px 15px 0 0;
+  }
+}
 
 
 /* Tablet (≤992px) */
@@ -776,6 +872,7 @@ section {
         <ul class="nav-menu" id="nav-menu">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -791,7 +888,7 @@ section {
             <h1>I'm <span>Madhumitha</span></h1>
             <p class="subtitle"><span id="typed"></span></p>
             <p>A passionate Developer creating a responsive and user-friendly website. Committed to deliver the clean code and interactive user-friendly experiences.</p>
-            <a href="./images/Madhumitha Full stack resume.pdf" class="cta-button">Download CV</a>
+            <a href="./images/Madhumitha_M_Resume.pdf" class="cta-button">Download CV</a>
         </div>
     </section>
 
@@ -799,15 +896,61 @@ section {
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <div class="about-image"><img src="./images/madhu.jpg" alt=""></div>
+            <div class="about-image"><img src="./images/madhu.jpeg" alt=""></div>
             <div class="about-text">
                 <h3>Hello! I'm Madhumitha</h3>
-                <p>A Full Stack Developer with a strong command of front-end and back-end technologies including HTML, CSS, JavaScript, Bootstrap, React.js, AJAX, REST API, jQuery, Express.js, Node.js, MongoDB, Python and Figma. </p>
                 <p>Passionate about coding, problem-solving, and continuously learning new technologies to deliver high-quality digital solutions.</p>
                 <p>I focus on clean code, performance, and security, while staying curious and continuously learning new technologies.</p>
             </div>
         </div>
     </section>
+
+    <!-- Experience section -->
+     <!-- Experience Section -->
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-container">
+
+    <div class="experience-card">
+      <div class="exp-left">
+        <span class="exp-badge">Full Time</span>
+        <h3>Programmer Analyst Trainee</h3>
+        <p class="company">Cognizant Technology Solutions</p>
+        <p class="duration">Feb 2026 - Present</p>
+      </div>
+
+      <div class="exp-right">
+        <ul>
+          <li>Undergoing structured training in software development fundamentals, coding standards, and enterprise application workflows.</li>
+          <li>Working with modern technologies to build, debug, and enhance applications while following Agile practices.</li>
+          <li>Collaborating with team members to understand business requirements and implement efficient technical solutions.</li>
+          <li>Strengthening problem-solving, analytical, and communication skills through hands-on tasks and real-world scenarios.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-left">
+        <span class="exp-badge">Internship</span>
+        <h3>MERN Stack Developer</h3>
+        <p class="company">Aevevo Technology</p>
+        <p class="duration">Sep 2025 - Jan 2026</p>
+      </div>
+
+      <div class="exp-right">
+        <ul>
+          <li>Designed and developed multiple MERN stack applications</li>
+          <li>Implemented authentication, API integrations, and state management</li>
+          <li>Developed REST APIs and integrated frontend with backend services</li>
+          <li>Focused on clean UI, performance, and reusable components</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Education Section -->
     <section id="education">
@@ -815,18 +958,10 @@ section {
         <div class="education-timeline">
             <div class="education-item">
                 <div class="education-card">
-                    <h3>Full-Stack Web Development - Certification</h3>
-                    <div class="year">2025 - Present</div>
-                    <p>WebDSchool</p>
-                    <p>Velachery, Chennai</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="education-card">
                     <h3>Bachelor of Technology - Artificial Intelligence and Data Science</h3>
                     <div class="year">2021 - 2025</div>
                     <p>KCG College of Technolofy</p>
-                    <p>GPA - 8.1</p>
+                    <p>GPA - 8.25</p>
                 </div>
             </div>
             <div class="education-item">
@@ -1215,7 +1350,7 @@ section {
                 <h4>Madhumitha</h4>
                 <p>Full Stack Developer passionate about creating innovative web solutions and bringing ideas to life through clean, efficient code.</p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/madhumitha-melino/" class="social-link" target="_blank" rel="noopener noreferrer" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/madhumitha0344/" class="social-link" target="_blank" rel="noopener noreferrer" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/M-Madhumitha" class="social-link" target="_blank" rel="noopener noreferrer" title="Github"><i class="fa-brands fa-github"></i></a>
                     <a href="https://x.com/shinchan030" class="social-link" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
@@ -1226,6 +1361,7 @@ section {
                 <ul class="footer-links">
                     <li><a href="#home"><i class="fa-solid fa-circle"></i>Home</a></li>
                     <li><a href="#about"><i class="fa-solid fa-circle"></i>About Me</a></li>
+                    <li><a href="#experience"><i class="fa-solid fa-circle"></i>Experience</a></li>
                     <li><a href="#education"><i class="fa-solid fa-circle"></i>Education</a></li>
                     <li><a href="#skills"><i class="fa-solid fa-circle"></i>Skills</a></li>
                     <li><a href="#projects"><i class="fa-solid fa-circle"></i>Projects</a></li>
